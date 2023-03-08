@@ -1,7 +1,6 @@
 ____CREDITOS:____________________________________________________________________
 https://www.linkedin.com/in/lucas-oliveira-963260249/
 https://github.com/LucasPerolive
-https://github.com/mxmotta/docker-apache-php
 
 
 ___COMANDOS DE NAVEGACAO WIN:____________________________________________________
