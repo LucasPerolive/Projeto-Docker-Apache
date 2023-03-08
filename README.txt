@@ -3,15 +3,36 @@ https://www.linkedin.com/in/lucas-oliveira-963260249/
 https://github.com/LucasPerolive
 
 
-___COMANDOS DE NAVEGACAO WIN:____________________________________________________
+____LINK DE DOWNLOAD DO DOCKER:__________________________________________________
+link para baixar o .exe do docker no windows.
+https://docs.docker.com/desktop/install/windows-install/
+
+
+
+___COMANDOS DE NAVEGACAO WIN(voce ira usar para navegar entre os diretoirios):___
 dir - lista conteudo do diretorio
 cd - entra no diretorio
 cd .. - volta para o diretorio acima
 
 
-____LINK DE DOWNLOAD DO DOCKER:__________________________________________________
-link para baixar o .exe do docker no windows.
-https://docs.docker.com/desktop/install/windows-install/
+____CODIGO DO "Dockerfile"(aquivo que ira gerar a imagem):_______________________
+# Escolhe imagem de referencia do  dockerhub - Neste caso eh o debian na ultima versao
+FROM debian:latest
+
+# Comandos que serao executos na inicializacao do container
+RUN apt-get update -y
+RUN apt-get install -y apache2 php
+RUN apt-get install -y nano
+
+# Arquivos de copia
+COPY apache-conf /etc/apache2/apache2.conf
+COPY pagina /var/www/html 
+# Expose Apache - Faz com que a porta do container possa ser acessivel
+EXPOSE 80
+
+# Faz com que o container nao seja excluido quando voce sair dele
+CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
+
 
 
 ____TUTORIAL:_____________________________________________________________________
