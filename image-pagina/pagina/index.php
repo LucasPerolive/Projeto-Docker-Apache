@@ -12,10 +12,10 @@
 				<h3>Insira 2 números para a operação desejada:</h3>
 				Número 1:<input type="text" name="n1"><br><br>
 				Número 2:<input type="text" name="n2"><br><br>
-				<button type="submit" class="btn btn-primary" name="soma">Somar</button>
-				<button type="submit" class="btn btn-primary" name="subtrai">Subtrair</button>
-				<button type="submit" class="btn btn-primary" name="multiplica">Multiplicar</button>
-				<button type="submit" class="btn btn-primary" name="divide">Dividir</button>
+				<button type="submit" class="btn btn-primary" name="acao" value="soma">Somar</button>
+				<button type="submit" class="btn btn-primary" name="acao" value="subtrai">Subtrair</button>
+				<button type="submit" class="btn btn-primary" name="acao" value="multiplica">Multiplicar</button>
+				<button type="submit" class="btn btn-primary" name="acao" value="divide">Dividir</button>
 			</fieldset>
 		 </center>
 		</form>
