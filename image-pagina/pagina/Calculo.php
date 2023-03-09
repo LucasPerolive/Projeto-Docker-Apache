@@ -1,45 +1,39 @@
 <!--HTML apenas para melhorar a saída do PHP-->
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <link  href="css/bootstrap.css" rel="stylesheet">
+        <title>Resultado</title>
+    </head>
     <body>
-    <center>
+        <center>
         <h1>
 <!--Código PHP-->
 <?php
-//Os dois números digitados na página html
-$n1 = $_POST ["n1"];
-$n2 = $_POST ["n2"];
-
-//Crias as variáveis de operação
-$soma = "";
-$subtrai = "";
-$multiplica = "";
-$divide = "";
-
-//Faz os calculos das váriaveis
-$nm = $n1 + $n2;
-$ns = $n1 - $n2;
-$nmult = $n1 * $n2;
-$nd = $n1 / $n2;
-
-    //Com o isset(), você verifica se o campo existe no $_POST, se existir, atualiza as variáveis que você já criou vazias.
-    if(isset($_POST ["soma"])){
-        echo "A soma é $nm";
+//Funcao da calculadora:
+function calcular($n1, $n2, $acao){
+    if ($acao=="soma"){
+       return $n1 + $n2;
     }
-    elseif(isset($_POST ["subtrai"])){
-        echo "A subtração é $ns";
+    elseif ($acao=="subtrai"){
+       return $n1 - $n2;
     }
-    elseif(isset($_POST ["multiplica"])){
-        echo "A multiplicação é $nmult";
+    elseif ($acao=="multiplica"){
+       return $n1 * $n2;
     }
-    elseif(isset($_POST ["divide"])){
-        echo "A divisão é $nd";
+    elseif ($acao=="divide"){
+       return $n1 / $n2;
     }
+    //Nao foi possivel executar 
     else{
-        echo "Tente novamente";
+        echo ("Tente novamente<br><a href='venda.php'> voltar </a>");
     }
-
+}
+//Chamando a funcao e moostrando o resultado
+$resultado = calcular($n1 = $_POST ["n1"], $n2 = $_POST ["n2"], $acao = $_POST ["acao"]);
+echo ("O valor da operação: $resultado<br><a href='index.php'> voltar </a>");
 ?>
         </h1>
-    </center>
+        </center>
     </body>
 </html>
