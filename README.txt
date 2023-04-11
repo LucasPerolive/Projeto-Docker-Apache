@@ -34,7 +34,7 @@ COPY pagina /var/www/html
 EXPOSE 80
 
 # Faz com que o container nao seja excluido quando voce sair dele;
-# O CMD define o comando padrao que irá ser executado toda vez que iniciar o container quaso nao seja definido o parametro do "ENTRYPOINT";
+# O CMD define o comando padrao que ira ser executado toda vez que iniciar o container quaso nao seja definido o parametro do "ENTRYPOINT";
 CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 
 
@@ -52,26 +52,37 @@ ____TUTORIAL:___________________________________________________________________
 >docker run hello-world
 #A saída deve ser: "Hello from Docker";
 
-#5 - Hora de criar sua imagem, iremos usar a versão mais recente do DEBIAN. Para criar a imagem digite o seguinte comando:
+#5 - Hora de criar sua imagem, iremos usar a versao mais recente do DEBIAN. Para criar a imagem digite o seguinte comando:
 > docker build -t <nomedaimagem>:<versao> <diretorio>
 #Caso voce esteja no diretorio da imagem coloque um ponto (.) no lugar do diretorio ou o caminho absoluto, o nome da imagem fica a sua escolha;
 #EX: "  > docker build -t lucas/docker-webserver:1.0 .  "
 
-#6 - Crie um container apartir da imagem e configure a porta local:
-> docker container run --name <nomedocontainer> -d -it -p 8080:80 <nomedaimagem>:<versao>
-# "<nomedocontiner>" voce pode colocar o que desejar;
-#"-d" faz com que o container pare apenas quando desejar;
-#"-it" para usar o modo interativo;
-#"-p" configura a porta;
+#6 - Faça upload da usa imagem para sua conta do DockerHub:
+> docker push <nomedousuariododockerhub>/<nomedaimagem>:<versao>
 
-#7 - entre no browser de sua preferencia e digite na URL:
+#7 - Crie/Modifique o compose.yml:
+# Mude o que esta entre os "<>", de acordo com as estapas anteriores;
+____EX:____________________________________________________________________________
+
+version: "<versao>"
+services:
+  calculadora:
+    image: <nomedousuariododockerhub>/<nomedaimagem>:<versao>
+    container_name: <nomedocontainer>
+    ports:
+      - "<portadeacesso>:<portadoprotocolo>"
+___________________________________________________________________________________
+
+#8 - Use o compose.yml para criar os containers:
+# Use esse comando no diretorio em que esta o compose;
+> docker compose up -d
+
+#9 - Entre no browser de sua preferencia e digite na URL:
 localhost:8080
 
-#8 Exclua seu container:
-> docker ps -a
-# Para listar todos os containers, pegue o ID do container desejado;
-> docker rm <ID> --force
-
+#10 - Abortar o docker compose:
+> docker compose down
+# Faz com que os conteiner parem e seja excluidos.
 
 
 
