@@ -81,7 +81,7 @@ docker build -t lucasperolive/calculadora:1.1 .
 docker push <nomedousuariododockerhub>/<nomedaimagem>:<versao>
 ```
 
-##EX:
+#EX:
 
 ```
 docker push lucasperolive/calculadora:1.1
