@@ -1,16 +1,16 @@
-<h1>CREDITOS:</h1>
+# CREDITOS:
 https://www.linkedin.com/in/lucas-oliveira-963260249/
 https://github.com/LucasPerolive
 
 
-<h1>LINK DE DOWNLOAD DO DOCKER:</h1>
-link para baixar o .exe do docker no windows.
+# LINK DE DOWNLOAD DO DOCKER:
+## link para baixar o .exe do docker no windows.
 https://docs.docker.com/desktop/install/windows-install/
 
 
 
-<h1>COMANDOS DE NAVEGACAO WIN:</h1>
-# Use estes comandos para chegar no diretorio desejado onde esta o site e dockerfile
+# COMANDOS DE NAVEGACAO WIN:
+## Use estes comandos para chegar no diretorio desejado onde esta o site e dockerfile
 
 dir - lista conteudo do diretorio
 cd - entra no diretorio
@@ -18,7 +18,8 @@ cd .. - volta para o diretorio acima
 
 
 
-<h1>CODIGO DO "Dockerfile"(aquivo que ira gerar a imagem):</h1>
+# CODIGO DO "Dockerfile"(aquivo que ira gerar a imagem):
+<hr>
 # Escolhe imagem de referencia do  dockerhub - Neste caso eh o debian na ultima versao;
 FROM debian:latest
 
