@@ -1,15 +1,15 @@
-<h1>____CREDITOS:____________________________________________________________________</h1>
+<h1>____CREDITOS:________________________________________________________________</h1>
 https://www.linkedin.com/in/lucas-oliveira-963260249/
 https://github.com/LucasPerolive
 
 
-<h1>____LINK DE DOWNLOAD DO DOCKER:__________________________________________________</h1>
+<h1>____LINK DE DOWNLOAD DO DOCKER:______________________________________________</h1>
 link para baixar o .exe do docker no windows.
 https://docs.docker.com/desktop/install/windows-install/
 
 
 
-<h1>___COMANDOS DE NAVEGACAO WIN:____________________________________________________</h1>
+<h1>___COMANDOS DE NAVEGACAO WIN:________________________________________________</h1>
 # Use estes comandos para chegar no diretorio desejado onde esta o site e dockerfile
 
 dir - lista conteudo do diretorio
@@ -18,7 +18,7 @@ cd .. - volta para o diretorio acima
 
 
 
-<h1>____CODIGO DO "Dockerfile"(aquivo que ira gerar a imagem):_______________________</h1>
+<h1>____CODIGO DO "Dockerfile"(aquivo que ira gerar a imagem):____________________</h1>
 # Escolhe imagem de referencia do  dockerhub - Neste caso eh o debian na ultima versao;
 FROM debian:latest
 
@@ -46,7 +46,7 @@ CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 
 
 
-<h1>____TUTORIAL:_____________________________________________________________________</h1>
+<h1>____TUTORIAL:_________________________________________________________________</h1>
 
 #1 - Instale o docker normalmente no pc;
 # --- CRIE UMA CONTA NO DOCKERHUB E FAÇA LOGIN --- 
@@ -71,7 +71,7 @@ CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 
 #7 - Crie/Modifique o compose.yml:
 # Mude o que esta entre os "<>", de acordo com as estapas anteriores;
-<h1>____EX:____________________________________________________________________________</h1>
+<h1>____EX:________________________________________________________________________</h1>
 
 # Versão do compose
 version: "<versao>"
