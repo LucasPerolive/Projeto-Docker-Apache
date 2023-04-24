@@ -89,9 +89,6 @@ docker push lucasperolive/calculadora:1.1
 
 ##7 - Crie/Modifique o compose.yml:
 > Mude o que esta entre os "<>", de acordo com as estapas anteriores;
-<hr>
-##EX:
-
 ```
 # Versão do compose
 version: "<versao>"
@@ -103,6 +100,22 @@ services:
     # Porta para acesso
     ports:
       - "<portadeacesso>:<portadoprotocolo>"
+```
+
+<hr>
+##EX:
+
+```
+# Versão do compose
+version: "1.1"
+services:
+  calculadora:
+    # Imagem que foi feita o push
+    image: lucasperolive/calculadora:1.1
+    container_name: calculadora
+    # Porta para acesso
+    ports:
+      - "8080:80"
 ```
 
 <hr>
