@@ -91,6 +91,7 @@ docker push lucasperolive/calculadora:1.1
 
 <hr>
 ##EX:
+
 ```
 \# Versão do compose
 version: "<versao>"
@@ -103,6 +104,7 @@ services:
     ports:
       - "<portadeacesso>:<portadoprotocolo>"
 ```
+
 <hr>
 
 ##8 - Use o compose.yml para criar os containers:
