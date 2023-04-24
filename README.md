@@ -1,5 +1,5 @@
 # CREDITOS:
-> https://www.linkedin.com/in/lucas-oliveira-963260249/
+> https://www.linkedin.com/in/lucas-oliveira-963260249/ \n
 > https://github.com/LucasPerolive
 
 
