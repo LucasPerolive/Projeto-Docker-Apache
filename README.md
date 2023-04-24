@@ -50,41 +50,48 @@ CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 
 # TUTORIAL:
 
-###1 - Instale o docker normalmente no pc;
-##### --- CRIE UMA CONTA NO DOCKERHUB E FAÇA LOGIN --- 
+##1 - Instale o docker normalmente no pc;
+#### --- CRIE UMA CONTA NO DOCKERHUB E FAÇA LOGIN --- 
 
-###2 - Abra o <b>cmd</b> e digite o seguinte comando: 
+##2 - Abra o <b>cmd</b> e digite o seguinte comando: 
 ```
 wsl install
 ```
 
->###3 - Substitua o conteudo na pasta pagina do projeto, caso nao substitua ira ter uma caculadora na pagina web;
+##3 - Substitua o conteudo na pasta pagina do projeto, caso nao substitua ira ter uma caculadora na pagina web;
 
->###4 - Ainda no cmd digite o seguinte comando:
-
+##4 - Ainda no cmd digite o seguinte comando:
+```
 docker run hello-world
+```
+>A saída deve ser: "Hello from Docker";
 
->\#A saída deve ser: "Hello from Docker";
-
->###5 - Hora de criar sua imagem, iremos usar a versao mais recente do DEBIAN. Para criar a imagem digite o seguinte comando:
-
+##5 - Hora de criar sua imagem, iremos usar a versao mais recente do DEBIAN. Para criar a imagem digite o seguinte comando:
+```
 docker build -t <nomedousuariododockerhub>/<nomedaimagem>:<versao> <diretorio>
+```
+>Caso voce esteja no diretorio da imagem coloque um ponto (.) no lugar do diretorio ou o caminho absoluto, o nome da imagem fica a sua escolha;
+##EX: 
+```
+docker build -t lucasperolive/calculadora:1.1 .
+```
 
->\#Caso voce esteja no diretorio da imagem coloque um ponto (.) no lugar do diretorio ou o caminho absoluto, o nome da imagem fica a sua escolha;
->\#EX: "  > docker build -t lucasperolive/calculadora:1.1 .  "
+##6 - Faça upload da usa imagem para sua conta do DockerHub:
+```
+docker push <nomedousuariododockerhub>/<nomedaimagem>:<versao>
+```
 
->###6 - Faça upload da usa imagem para sua conta do DockerHub:
+##EX:
+```
+docker push lucasperolive/calculadora:1.1
+```
 
-> docker push <nomedousuariododockerhub>/<nomedaimagem>:<versao>
-
->\#EX: "  > docker push lucasperolive/calculadora:1.1   "
-
->###7 - Crie/Modifique o compose.yml:
->\# Mude o que esta entre os "<>", de acordo com as estapas anteriores;
+##7 - Crie/Modifique o compose.yml:
+> Mude o que esta entre os "<>", de acordo com as estapas anteriores;
 
 <hr>
-###EX:
-
+##EX:
+```
 \# Versão do compose
 version: "<versao>"
 services:
@@ -95,23 +102,21 @@ services:
     \# Porta para acesso
     ports:
       - "<portadeacesso>:<portadoprotocolo>"
-
+```
 <hr>
 
->###8 - Use o compose.yml para criar os containers:
->\# Use esse comando no diretorio em que esta o compose;
-
+##8 - Use o compose.yml para criar os containers:
+> Use esse comando no diretorio em que esta o compose;
+```
 docker compose up -d
+```
 
->###9 - Entre no browser de sua preferencia e digite na URL:
->localhost:8080
-
->###10 - Abortar o docker compose:
-
+##9 - Entre no browser de sua preferencia e digite na URL:
+```
+localhost:8080
+```
+##10 - Abortar o docker compose:
+```
 docker compose down
-
->\# Faz com que os conteiner parem e seja excluidos.
-
-
-
-
+```
+> Faz com que os conteiner parem e seja excluidos.
