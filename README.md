@@ -50,13 +50,13 @@ CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 
 # TUTORIAL:
 
->###1 - Instale o docker normalmente no pc;
-#### --- CRIE UMA CONTA NO DOCKERHUB E FAÇA LOGIN --- 
+###1 - Instale o docker normalmente no pc;
+##### --- CRIE UMA CONTA NO DOCKERHUB E FAÇA LOGIN --- 
 
->###2 - Abra o <b>cmd</b> e digite o seguinte comando: 
-
+###2 - Abra o <b>cmd</b> e digite o seguinte comando: 
+```
 wsl install
-
+```
 
 >###3 - Substitua o conteudo na pasta pagina do projeto, caso nao substitua ira ter uma caculadora na pagina web;
 
