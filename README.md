@@ -2,9 +2,6 @@
 https://www.linkedin.com/in/lucas-oliveira-963260249/
 https://github.com/LucasPerolive
 
-```
-Lucas
-```
 
 <h1>____LINK DE DOWNLOAD DO DOCKER:__________________________________________________</h1>
 link para baixar o .exe do docker no windows.
