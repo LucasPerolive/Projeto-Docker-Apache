@@ -57,25 +57,30 @@ CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 ```
 wsl install
 ```
+
 ##3 - Substitua o conteudo na pasta pagina do projeto, caso nao substitua ira ter uma caculadora na pagina web;
 ##4 - Ainda no cmd digite o seguinte comando:
 ```
 docker run hello-world
 ```
+
 >A saída deve ser: "Hello from Docker";
 ##5 - Hora de criar sua imagem, iremos usar a versao mais recente do DEBIAN. Para criar a imagem digite o seguinte comando:
 ```
 docker build -t <nomedousuariododockerhub>/<nomedaimagem>:<versao> <diretorio>
 ```
+
 >Caso voce esteja no diretorio da imagem coloque um ponto (.) no lugar do diretorio ou o caminho absoluto, o nome da imagem fica a sua escolha;
 ##EX: 
 ```
 docker build -t lucasperolive/calculadora:1.1 .
 ```
+
 ##6 - Faça upload da usa imagem para sua conta do DockerHub:
 ```
 docker push <nomedousuariododockerhub>/<nomedaimagem>:<versao>
 ```
+
 ##EX:
 
 ```
@@ -101,15 +106,18 @@ services:
 ```
 
 <hr>
+
 ##8 - Use o compose.yml para criar os containers:
 > Use esse comando no diretorio em que esta o compose;
 ```
 docker compose up -d
 ```
+
 ##9 - Entre no browser de sua preferencia e digite na URL:
 ```
 localhost:8080
 ```
+
 ##10 - Abortar o docker compose:
 ```
 docker compose down
