@@ -109,6 +109,7 @@ services:
 
 ##8 - Use o compose.yml para criar os containers:
 > Use esse comando no diretorio em que esta o compose;
+
 ```
 docker compose up -d
 ```
